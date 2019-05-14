@@ -48,4 +48,25 @@ def run(filename):
 
     print symbols
     for command in commands:
-        print command
+        if command['op']=='push':
+            stack.append([x[:] for x in tmp])
+        elif command['op']=='pop':
+            stack.pop()
+        elif command['op']=='move':
+            t = make_translate(float(command[args][0]), float(command[args][1]), float(command[args][2]))
+            matrix_mult( stack[-1], t )
+            stack[-1] = [ x[:] for x in t]
+        elif command['op']=='rotate':
+            theta = float(command[args][1]) * (math.pi / 180)
+            if command[args][0] == 'x':
+                t = make_rotX(theta)
+            elif command[args][0] == 'y':
+                t = make_rotY(theta)
+            else:
+                t = make_rotZ(theta)
+            matrix_mult( stack[-1], t )
+            stack[-1] = [ x[:] for x in t]
+        elif command['op']=='scale':
+            t = make_scale(float(command[args][0]), float(command[args][1]), float(command[args][2]))
+            matrix_mult( stack[-1], t )
+            stack[-1] = [ x[:] for x in t]

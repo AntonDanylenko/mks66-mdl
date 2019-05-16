@@ -8,17 +8,17 @@ constants darker_brown 0.3 0.4 0 0.4 0.2 0 0.1 0 0
 push
 move 250 250 0
 sphere dull_yellow 0 0 0 200
-sphere dull_brown -70 70 160 30
-sphere dull_brown 70 60 160 30
+sphere dull_brown -60 70 165 30
+sphere dull_brown 60 60 165 30
 sphere dull_orange -60 -140 150 80
 push
-move -90 120 120
+move -80 120 130
 rotate x -40
 rotate z -10
 torus dull_brown 0 0 0 15 40
 pop
 push
-move 85 110 120
+move 75 110 130
 rotate x -20
 rotate z 15
 torus dull_brown 0 0 0 15 40

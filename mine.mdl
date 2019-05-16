@@ -8,8 +8,9 @@ sphere dull_yellow 0 0 0 200
 sphere shiny_teal -80 80 160 30
 sphere shiny_teal 80 80 160 30
 push
-move 0 -100 150
+move 0 -80 150
 rotate x 30
+rotate z 30
 scale 1 1 0.5
 torus dull_yellow 0 0 0 30 65
 display

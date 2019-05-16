@@ -5,13 +5,8 @@ constants dull_yellow 0.4 0.8 0.2 0.3 0.8 0.2 0.3 0.3 0.3
 push
 move 250 250 0
 sphere dull_yellow 0 0 0 200
-sphere shiny_teal -100 100 150 30
-sphere shiny_teal 100 100 150 30
-push
-rotate x 45
-rotate y 45
-box -40 40 40 80 80 80
-pop
+sphere shiny_teal -100 100 200 30
+sphere shiny_teal 100 100 -200 30
 push
 move 0 -150 0
 rotate x 30

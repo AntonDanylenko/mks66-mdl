@@ -103,6 +103,6 @@ def run(filename):
             tmp = []
         elif command['op']=='save':
             print(command)
-            save_extension(screen, command['args'][0])
+            save_extension(screen, command['args'][0]+'.png')
         elif command['op']=='display':
             display(screen)

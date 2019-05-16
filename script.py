@@ -78,21 +78,21 @@ def run(filename):
                     float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                     float(command['args'][3]), float(command['args'][4]), float(command['args'][5]))
             matrix_mult( stack[-1], tmp )
-            draw_polygons(tmp, screen, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
+            draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
         elif command['op']=='sphere':
             add_sphere(tmp,
                        float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                        float(command['args'][3]), step_3d)
             matrix_mult( stack[-1], tmp )
-            draw_polygons(tmp, screen, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
+            draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
         elif command['op']=='torus':
             add_torus(tmp,
                       float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                       float(command['args'][3]), float(command['args'][4]), step_3d)
             matrix_mult( stack[-1], tmp )
-            draw_polygons(tmp, screen, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
+            draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
         elif command['op']=='line':
             add_edge( tmp,

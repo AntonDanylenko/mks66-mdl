@@ -12,8 +12,7 @@ sphere dull_brown 80 70 160 30
 sphere dull_orange -60 -100 150 80
 push
 move -40 -50 180
-rotate x 30
-rotate z 5
+rotate z 10
 scale 1 1 0.5
 torus dull_orange 0 0 0 20 70
 pop

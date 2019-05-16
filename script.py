@@ -102,6 +102,7 @@ def run(filename):
             draw_lines(tmp, screen, zbuffer, color)
             tmp = []
         elif command['op']=='save':
+            print(command)
             save_extension(screen, command['args'][0])
         elif command['op']=='display':
             display(screen)

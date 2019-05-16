@@ -10,7 +10,7 @@ move 250 250 0
 sphere dull_yellow 0 0 0 200
 sphere dull_brown -70 70 160 30
 sphere dull_brown 70 60 160 30
-sphere dull_orange -60 -100 150 80
+sphere dull_orange -60 -140 150 80
 push
 move -90 120 130
 rotate x -40
@@ -24,21 +24,19 @@ rotate z 15
 torus dull_brown 0 0 0 15 40
 pop
 push
-move 0 -50 0
-push
-move 10 -20 160
+move 10 -50 160
 rotate x -10
 rotate z -10
-torus darker_brown 0 0 0 5 80
+torus darker_brown 0 0 0 5 60
 pop
 push
-move -40 -60 180
+move -40 -100 180
 rotate z 10
 scale 1 1 0.5
 torus dull_orange 0 0 0 20 70
 pop
 push
-move -90 -80 140
+move -90 -120 140
 rotate x 30
 rotate z 100
 torus dull_orange 0 0 0 23 65

@@ -77,6 +77,8 @@ def run(filename):
             add_box(tmp,
                     float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                     float(command['args'][3]), float(command['args'][4]), float(command['args'][5]))
+            if command['constants'] is not None:
+                reflect = command['constants']
             matrix_mult( stack[-1], tmp )
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
@@ -84,6 +86,8 @@ def run(filename):
             add_sphere(tmp,
                        float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                        float(command['args'][3]), step_3d)
+            if command['constants'] is not None:
+                reflect = command['constants']
             matrix_mult( stack[-1], tmp )
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
@@ -91,6 +95,8 @@ def run(filename):
             add_torus(tmp,
                       float(command['args'][0]), float(command['args'][1]), float(command['args'][2]),
                       float(command['args'][3]), float(command['args'][4]), step_3d)
+            if command['constants'] is not None:
+                reflect = command['constants']
             matrix_mult( stack[-1], tmp )
             draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
             tmp = []
